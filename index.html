@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+    </style>
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="left-box">
+        <h3 class="left-box__title">Your Result</h3>
+        <div class="left-box__circle">
+          <div class="left-box__circle--title">76</div>
+          <div class="left-box__circle--subtitle">of 100</div>
+        </div>
+        <h2 class="left-box__description-title">Great</h2>
+        <p class="left-box__description">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
+      <section class="right-box">
+        <h3 class="right-box__title">Summary</h3>
+        <div class="right-box__content">
+          <div class="content-one light-red">
+            <span class="mr-1">Reaction</span>
+            <span class="text-dark"
+              >80 <span class="text-light">/ 100</span></span
+            >
+          </div>
+          <div class="content-two orange-yellow">
+            <span class="mr-1">Memory</span>
+            <span class="text-dark">
+              96 <span class="text-light">/ 100</span></span
+            >
+          </div>
+          <div class="content-three green-teal">
+            <span class="mr-1">Verbal</span>
+            <span class="text-dark"
+              >61 <span class="text-light">/ 100</span></span
+            >
+          </div>
+          <div class="content-four cobalt-blue">
+            <span class="mr-1">Visual</span>
+            <span class="text-dark"
+              >72 <span class="text-light">/ 100</span></span
+            >
+          </div>
+        </div>
+        <button class="right-box__button">Continue</button>
+      </section>
+    </div>
+  </body>
+</html>
