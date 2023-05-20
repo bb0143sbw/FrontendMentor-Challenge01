@@ -1,207 +1,243 @@
+/* 
+The designs were created to the following widths:
+- Mobile: 375px  - Desktop: 1440px 
+diyor ama ne anlama geliyor, ne yapmam lazım anlamadım ???
+
+-width ve height kullanımı nasıl olmalı bu tarz card tasarımlarında?
+
+Genel kullanılan bir layout var muhtemelen, bu nedir ? 
+
+Öğrenmelisin bunları !!*!!
+
+-mobile first design yapmadım, yapmalı mıyım ? 
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orange-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --text-light: hsl(280, 1%, 59%, 1);
+  --FS: 18px;
+  --FW-1: 500;
+  --FW-2: 700;
+  --FW-3: 800;
+}
+
 * {
   margin: 0;
   padding: 0;
-}
-
-:root {
-  --white: hsl(0, 0%, 100%);
-  --pale-blue: hsl(221, 100%, 96%);
-  --light-lavender: hsl(241, 100%, 89%);
-  --dark-gray-blue: hsl(224, 30%, 27%);
-  --FF: "Hanken Grotesk", sans-serif;
-}
-
-.container {
-  width: 750px;
-  height: 450px;
-  margin: 15% auto;
-  display: flex;
-  font-family: var(--FF);
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
   font-size: 18px;
 }
 
-/**************************************** left box *****************************************/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+/**************************** left-box ***********************/
+
 .left-box {
-  width: 375px;
-  height: 100%;
+  height: 500px;
+  width: 350px;
+  /* min-width: 15%;
+  max-width: 20%; */
   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-  color: var(--white);
-  border-radius: 30px;
+
+  /* backgroun-image: linear-gradient kullanımını öğrendim +++ */
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  justify-content: flex-start;
+  text-align: center;
+  color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .left-box__title {
-  font-size: 22px;
-  font-weight: 500;
+  padding: 2.5rem;
   opacity: 60%;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  font-size: 22px;
+  font-weight: var(--FW-1);
 }
 
 .left-box__circle {
-  padding: 2rem;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
   background-image: linear-gradient(
     hsla(256, 72%, 46%, 1),
     hsla(241, 72%, 46%, 0)
   );
-  width: 120px;
-  height: auto;
-  border-radius: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-.left-box__circle--title {
-  font-size: 4rem;
-  font-weight: 700;
-  padding-top: 1rem;
+.left-box__circle--big {
+  font-size: 70px;
+  font-weight: var(--FW-3);
+}
+.left-box__circle--small {
+  opacity: 45%;
 }
 
-.left-box__circle--subtitle {
-  font-size: 1rem;
-  opacity: 40%;
+.left-box__information {
+  padding: 1.5rem;
+}
+
+.left-box__information--title {
+  font-size: 28px;
   padding-bottom: 1rem;
 }
-
-.left-box__description-title {
-  margin: 0;
-  padding: 0;
-  margin-top: 2rem;
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.left-box__description {
+.left-box__information--description {
+  padding: 0 1rem;
   opacity: 60%;
-  text-align: center;
-  padding: 0 2rem;
-  margin-bottom: 3rem;
 }
 
-/**************************************** right box *****************************************/
+/**************************** right-box ***********************/
+
 .right-box {
-  width: 375px;
-  height: 100%;
+  height: 500px;
+  width: 350px;
+  /* min-width: 15%;
+  max-width: 20%; */
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0 3rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 25px;
 }
 
 .right-box__title {
-  color: var(--dark-gray-blue);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
+  padding: 2.5rem 2.5rem 1.5rem 2.5rem;
   font-size: 22px;
+  font-weight: var(--FW-2);
 }
 
-.right-box__content {
-  width: 100%;
-  height: 100%;
-  padding: 0 1rem;
+.right-box__results {
+  padding-left: 2.5rem;
+  padding-right: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 0.75rem;
 }
 
-.content-one {
+.right-box__result-one {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff6f5;
+  color: var(--light-red);
+  font-weight: var(--FW-2);
+  padding: 15px 12px;
+  border-radius: 5px;
+  padding-left: 2.5rem;
   background-image: url("assets/images/icon-reaction.svg");
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
+  background-position: 12px 16px;
 }
 
-.content-two {
+.result-one {
+  color: var(--dark-gray-blue);
+  font-weight: var(--FW-2);
+}
+
+.right-box__result-two {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fffbf2;
+  color: var(--orange-yellow);
+  font-weight: var(--FW-2);
+  padding: 15px 12px;
+  border-radius: 5px;
+  padding-left: 2.5rem;
   background-image: url("assets/images/icon-memory.svg");
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-around;
+  background-position: 12px 16px;
 }
-.content-three {
+
+.result-two {
+  color: var(--dark-gray-blue);
+  font-weight: var(--FW-2);
+}
+
+.right-box__result-three {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2fafa;
+  color: var(--green-teal);
+  font-weight: var(--FW-2);
+  padding: 15px 12px;
+  border-radius: 5px;
+  padding-left: 2.5rem;
   background-image: url("assets/images/icon-verbal.svg");
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-around;
+  background-position: 12px 16px;
 }
-.content-four {
+
+.result-three {
+  color: var(--dark-gray-blue);
+  font-weight: var(--FW-2);
+}
+
+.right-box__result-four {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f3fd;
+  color: var(--cobalt-blue);
+  font-weight: var(--FW-2);
+  padding: 15px 12px;
+  border-radius: 5px;
+  padding-left: 2.5rem;
   background-image: url("assets/images/icon-visual.svg");
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-around;
+  background-position: 12px 16px;
 }
 
-.mr-1 {
-  margin-right: 3rem;
-}
-
-.light-red {
-  color: hsl(0, 100%, 67%);
-}
-
-.orange-yellow {
-  color: hsl(39, 100%, 56%);
-}
-
-.green-teal {
-  color: hsl(166, 100%, 37%);
-}
-
-.cobalt-blue {
-  color: hsl(234, 85%, 45%);
-}
-
-.text-dark {
+.result-four {
   color: var(--dark-gray-blue);
-  font-weight: 700;
+  font-weight: var(--FW-2);
 }
 
 .text-light {
-  color: hsla(241, 100%, 85%, 0.9);
-  font-weight: 700;
+  color: var(--text-light);
 }
 
 .right-box__button {
-  margin: 0 auto;
-  border: none;
+  margin-top: 2rem;
+  margin-left: 2.5rem;
   padding: 16px 24px;
-  background-color: var(--dark-gray-blue);
+  width: 80%;
+  border: none;
   color: var(--white);
-  font-size: 16px;
-  font-weight: 700;
-  width: 90%;
+  background-color: var(--dark-gray-blue);
   border-radius: 30px;
-  margin-bottom: 1rem;
 }
 
-/***************************************** mobile design **********************************/
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    width: 375px;
   }
   .left-box {
-    border-radius: 0 0 30px 30px;
-  }
-  .left-box__description {
-    margin-bottom: 2rem;
+    border-radius: 0 0 25px 25px;
   }
 
-  .right-box__button {
-    margin-top: 3rem;
+  .right-box {
+    border-radius: 25px 25px 0 0;
   }
 }
