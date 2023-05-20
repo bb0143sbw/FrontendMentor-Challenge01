@@ -9,54 +9,55 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
-    </style>
+
     <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <section class="left-box">
-        <h3 class="left-box__title">Your Result</h3>
+        <h2 class="left-box__title">Your Result</h2>
         <div class="left-box__circle">
-          <div class="left-box__circle--title">76</div>
-          <div class="left-box__circle--subtitle">of 100</div>
+          <span class="left-box__circle--big">76</span>
+          <span class="left-box__circle--small">of 100</span>
         </div>
-        <h2 class="left-box__description-title">Great</h2>
-        <p class="left-box__description">
-          You scored higher than 65% of the people who have taken these tests.
-        </p>
+        <div class="left-box__information">
+          <h1 class="left-box__information--title">Great</h1>
+          <p class="left-box__information--description">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
       </section>
+
       <section class="right-box">
-        <h3 class="right-box__title">Summary</h3>
-        <div class="right-box__content">
-          <div class="content-one light-red">
-            <span class="mr-1">Reaction</span>
-            <span class="text-dark"
+        <h2 class="right-box__title">Summary</h2>
+        <div class="right-box__results">
+          <div class="right-box__result-one">
+            Reaction
+            <span class="result-one"
               >80 <span class="text-light">/ 100</span></span
             >
           </div>
-          <div class="content-two orange-yellow">
-            <span class="mr-1">Memory</span>
-            <span class="text-dark">
-              96 <span class="text-light">/ 100</span></span
+          <div class="right-box__result-two">
+            Memory
+            <span class="result-two"
+              >92 <span class="text-light">/ 100</span></span
             >
           </div>
-          <div class="content-three green-teal">
-            <span class="mr-1">Verbal</span>
-            <span class="text-dark"
+          <div class="right-box__result-three">
+            Verbal
+            <span class="result-three"
               >61 <span class="text-light">/ 100</span></span
             >
           </div>
-          <div class="content-four cobalt-blue">
-            <span class="mr-1">Visual</span>
-            <span class="text-dark"
+          <div class="right-box__result-four">
+            Visual
+            <span class="result-four"
               >72 <span class="text-light">/ 100</span></span
             >
           </div>
         </div>
-        <button class="right-box__button">Continue</button>
+        <button class="right-box__button" type="button">Continue</button>
       </section>
     </div>
   </body>
